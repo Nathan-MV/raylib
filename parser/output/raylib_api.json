@@ -520,28 +520,28 @@
       ]
     },
     {
-      "name": "Rectangle",
-      "description": "Rectangle, 4 components",
+      "name": "RayRectangle",
+      "description": "RayRectangle, 4 components",
       "fields": [
         {
           "type": "float",
           "name": "x",
-          "description": "Rectangle top-left corner position x"
+          "description": "RayRectangle top-left corner position x"
         },
         {
           "type": "float",
           "name": "y",
-          "description": "Rectangle top-left corner position y"
+          "description": "RayRectangle top-left corner position y"
         },
         {
           "type": "float",
           "name": "width",
-          "description": "Rectangle width"
+          "description": "RayRectangle width"
         },
         {
           "type": "float",
           "name": "height",
-          "description": "Rectangle height"
+          "description": "RayRectangle height"
         }
       ]
     },
@@ -633,7 +633,7 @@
       "description": "NPatchInfo, n-patch layout info",
       "fields": [
         {
-          "type": "Rectangle",
+          "type": "RayRectangle",
           "name": "source",
           "description": "Texture source rectangle"
         },
@@ -720,7 +720,7 @@
           "description": "Texture atlas containing the glyphs"
         },
         {
-          "type": "Rectangle *",
+          "type": "RayRectangle *",
           "name": "recs",
           "description": "Rectangles in texture for the glyphs"
         },
@@ -3136,7 +3136,7 @@
       ]
     },
     {
-      "name": "CloseWindow",
+      "name": "RayCloseWindow",
       "description": "Close window and unload OpenGL context",
       "returnType": "void"
     },
@@ -3511,7 +3511,7 @@
       "returnType": "void"
     },
     {
-      "name": "ShowCursor",
+      "name": "RayShowCursor",
       "description": "Shows cursor",
       "returnType": "void"
     },
@@ -5221,7 +5221,7 @@
           "name": "texture"
         },
         {
-          "type": "Rectangle",
+          "type": "RayRectangle",
           "name": "source"
         }
       ]
@@ -5234,7 +5234,7 @@
     {
       "name": "GetShapesTextureRectangle",
       "description": "Get texture source rectangle that is used for shapes drawing",
-      "returnType": "Rectangle"
+      "returnType": "RayRectangle"
     },
     {
       "name": "DrawPixel",
@@ -5730,7 +5730,7 @@
       "returnType": "void",
       "params": [
         {
-          "type": "Rectangle",
+          "type": "RayRectangle",
           "name": "rec"
         },
         {
@@ -5745,7 +5745,7 @@
       "returnType": "void",
       "params": [
         {
-          "type": "Rectangle",
+          "type": "RayRectangle",
           "name": "rec"
         },
         {
@@ -5830,7 +5830,7 @@
       "returnType": "void",
       "params": [
         {
-          "type": "Rectangle",
+          "type": "RayRectangle",
           "name": "rec"
         },
         {
@@ -5884,7 +5884,7 @@
       "returnType": "void",
       "params": [
         {
-          "type": "Rectangle",
+          "type": "RayRectangle",
           "name": "rec"
         },
         {
@@ -5903,7 +5903,7 @@
       "returnType": "void",
       "params": [
         {
-          "type": "Rectangle",
+          "type": "RayRectangle",
           "name": "rec"
         },
         {
@@ -5926,7 +5926,7 @@
       "returnType": "void",
       "params": [
         {
-          "type": "Rectangle",
+          "type": "RayRectangle",
           "name": "rec"
         },
         {
@@ -5949,7 +5949,7 @@
       "returnType": "void",
       "params": [
         {
-          "type": "Rectangle",
+          "type": "RayRectangle",
           "name": "rec"
         },
         {
@@ -6526,11 +6526,11 @@
       "returnType": "bool",
       "params": [
         {
-          "type": "Rectangle",
+          "type": "RayRectangle",
           "name": "rec1"
         },
         {
-          "type": "Rectangle",
+          "type": "RayRectangle",
           "name": "rec2"
         }
       ]
@@ -6572,7 +6572,7 @@
           "name": "radius"
         },
         {
-          "type": "Rectangle",
+          "type": "RayRectangle",
           "name": "rec"
         }
       ]
@@ -6587,7 +6587,7 @@
           "name": "point"
         },
         {
-          "type": "Rectangle",
+          "type": "RayRectangle",
           "name": "rec"
         }
       ]
@@ -6729,20 +6729,20 @@
     {
       "name": "GetCollisionRec",
       "description": "Get collision rectangle for two rectangles collision",
-      "returnType": "Rectangle",
+      "returnType": "RayRectangle",
       "params": [
         {
-          "type": "Rectangle",
+          "type": "RayRectangle",
           "name": "rec1"
         },
         {
-          "type": "Rectangle",
+          "type": "RayRectangle",
           "name": "rec2"
         }
       ]
     },
     {
-      "name": "LoadImage",
+      "name": "RayLoadImage",
       "description": "Load image from file into CPU memory (RAM)",
       "returnType": "Image",
       "params": [
@@ -7178,7 +7178,7 @@
           "name": "image"
         },
         {
-          "type": "Rectangle",
+          "type": "RayRectangle",
           "name": "rec"
         }
       ]
@@ -7284,7 +7284,7 @@
           "name": "image"
         },
         {
-          "type": "Rectangle",
+          "type": "RayRectangle",
           "name": "crop"
         }
       ]
@@ -7690,7 +7690,7 @@
     {
       "name": "GetImageAlphaBorder",
       "description": "Get image alpha border rectangle",
-      "returnType": "Rectangle",
+      "returnType": "RayRectangle",
       "params": [
         {
           "type": "Image",
@@ -8023,7 +8023,7 @@
           "name": "dst"
         },
         {
-          "type": "Rectangle",
+          "type": "RayRectangle",
           "name": "rec"
         },
         {
@@ -8042,7 +8042,7 @@
           "name": "dst"
         },
         {
-          "type": "Rectangle",
+          "type": "RayRectangle",
           "name": "rec"
         },
         {
@@ -8204,11 +8204,11 @@
           "name": "src"
         },
         {
-          "type": "Rectangle",
+          "type": "RayRectangle",
           "name": "srcRec"
         },
         {
-          "type": "Rectangle",
+          "type": "RayRectangle",
           "name": "dstRec"
         },
         {
@@ -8404,7 +8404,7 @@
           "name": "texture"
         },
         {
-          "type": "Rectangle",
+          "type": "RayRectangle",
           "name": "rec"
         },
         {
@@ -8533,7 +8533,7 @@
           "name": "texture"
         },
         {
-          "type": "Rectangle",
+          "type": "RayRectangle",
           "name": "source"
         },
         {
@@ -8556,11 +8556,11 @@
           "name": "texture"
         },
         {
-          "type": "Rectangle",
+          "type": "RayRectangle",
           "name": "source"
         },
         {
-          "type": "Rectangle",
+          "type": "RayRectangle",
           "name": "dest"
         },
         {
@@ -8591,7 +8591,7 @@
           "name": "nPatchInfo"
         },
         {
-          "type": "Rectangle",
+          "type": "RayRectangle",
           "name": "dest"
         },
         {
@@ -8985,7 +8985,7 @@
           "name": "glyphs"
         },
         {
-          "type": "Rectangle **",
+          "type": "RayRectangle **",
           "name": "glyphRecs"
         },
         {
@@ -9063,7 +9063,7 @@
       ]
     },
     {
-      "name": "DrawText",
+      "name": "RayDrawText",
       "description": "Draw text (using default font)",
       "returnType": "void",
       "params": [
@@ -9090,7 +9090,7 @@
       ]
     },
     {
-      "name": "DrawTextEx",
+      "name": "RayDrawTextEx",
       "description": "Draw text using font and additional parameters",
       "returnType": "void",
       "params": [
@@ -9303,7 +9303,7 @@
     {
       "name": "GetGlyphAtlasRec",
       "description": "Get glyph rectangle in font atlas for a codepoint (unicode character), fallback to '?' if not found",
-      "returnType": "Rectangle",
+      "returnType": "RayRectangle",
       "params": [
         {
           "type": "Font",
@@ -10422,7 +10422,7 @@
           "name": "texture"
         },
         {
-          "type": "Rectangle",
+          "type": "RayRectangle",
           "name": "source"
         },
         {
@@ -10453,7 +10453,7 @@
           "name": "texture"
         },
         {
-          "type": "Rectangle",
+          "type": "RayRectangle",
           "name": "source"
         },
         {
@@ -11352,7 +11352,7 @@
       ]
     },
     {
-      "name": "PlaySound",
+      "name": "RayPlaySound",
       "description": "Play a sound",
       "returnType": "void",
       "params": [

@@ -38,7 +38,7 @@ Detailed changes:
 [rcore] REVIEWED: BeginScissorMode(), identify rendering to texture (#3510) by @gulrak
 [rcore] REVIEWED: Window flags order (#3114) by @lesleyrs
 [rcore] REVIEWED: Full movement for right analog stick (#3095) by @PixelPhobicGames
-[rcore] REVIEWED: Fix Android app freeze after calling CloseWindow() (#3067) by @Bigfoot71
+[rcore] REVIEWED: Fix Android app freeze after calling RayCloseWindow() (#3067) by @Bigfoot71
 [rcore] REVIEWED: Lazy loading of default font used on image drawing (no InitWindow) by @raysan5
 [rcore] REVIEWED: Minor tweaks to raylib events automation system @raysan5
 [rcore] REVIEWED: GetCurrentMonitor() bugfix (#3058) by @hamyyy
@@ -1410,7 +1410,7 @@ Detailed changes:
 [core] RENAMED: struct Camera to Camera3D
 [core] RENAMED: struct SpriteFont to Font -> plus all required functions!
 [core] RENAMED: enum TextureFormat to PixelFormat
-[core] REVIEWED: Rectangle params int to float
+[core] REVIEWED: RayRectangle params int to float
 [core] REVIEWED: timing system for macOS
 [core] REMOVED: ColorToFloat()
 [core] ADDED: GetCurrentTime() on macOS
@@ -1455,7 +1455,7 @@ Detailed changes:
 [text] ADDED: GenImageFontAtlas()
 [text] ADDED: LoadFontData() to load data from TTF file
 [text] REMOVED: LoadTTF() internal function
-[text] REVIEWED: DrawTextEx() - avoid rendering SPACE character!
+[text] REVIEWED: RayDrawTextEx() - avoid rendering SPACE character!
 [text] RENAMED: GetDefaultFont() to GetFontDefault()
 [rlgl] ADDED: rlCheckBufferLimit()
 [rlgl] ADDED: LoadShaderCode()
@@ -1849,7 +1849,7 @@ other changes:
 [core] Android: Reviewed Android App cycle, paused if inactive
 [shaders] Implemented Blinn-Phong lighting shading model
 [textures] Implemented Floyd-Steinberg dithering - ImageDither()
-[text] Added line-break support to DrawText()
+[text] Added line-break support to RayDrawText()
 [text] Added TrueType Fonts support (using stb_truetype)
 [models] Implement function: CalculateBoundingBox(Mesh mesh)
 [models] Added functions to check Ray collisions
@@ -1884,7 +1884,7 @@ other changes:
 [rlgl] Added check for OpenGL supported extensions
 [rlgl] Added function SetBlenMode() to select some predefined blending modes
 [core] Added support for drop&drag of external files into running program
-[core] Added functions ShowCursor(), HideCursor(), IsCursorHidden()
+[core] Added functions RayShowCursor(), HideCursor(), IsCursorHidden()
 [core] Renamed function SetFlags() to SetConfigFlags()
 [shapes] Simplified some functions to improve performance
 [textures] Review of Image struct to support multiple data formats
@@ -1898,7 +1898,7 @@ other changes:
 [textures] Added function ImageConvertFormat()
 [textures] Added function GenTextureMipmaps()
 [text] Added support for Latin-1 Extended characters for default font
-[text] Redesigned SpriteFont struct, replaced Character struct by Rectangle
+[text] Redesigned SpriteFont struct, replaced Character struct by RayRectangle
 [text] Removed function GetFontBaseSize(), use directly spriteFont.size
 [models] Review of struct: Model (added shaders support)
 [models] Added 3d collision functions (sphere vs sphere vs box vs box)
@@ -1965,7 +1965,7 @@ NOTE:
 [rlgl] rlglLoadModel() stores vbo ids on new Model struct
 [textures] Added support for PKM files (ETC1, ETC2 compression support)
 [shapes] DrawRectangleV() - Modified, depending on OGL version uses TRIANGLES or QUADS
-[text] LoadSpriteFont() - Modified to use LoadImage()
+[text] LoadSpriteFont() - Modified to use RayLoadImage()
 [models] Minor changes on models loading to accomodate to new Model struct
 [audio] PauseMusicStream(), ResumeMusicStream() - Added
 [audio] Reduced music buffer size to avoid stalls on Raspberry Pi
@@ -2034,7 +2034,7 @@ Release:     raylib 1.0.6 (16 March 2014)
 [core] Unload and reload default font on fullscreen toggle
 [core] Corrected bug gamepad buttons checking if no gamepad available
 [texture] DrawTextureV() - Added, to draw using Vector2 for position
-[texture] LoadTexture() - Redesigned, now uses LoadImage() + CreateTexture()
+[texture] LoadTexture() - Redesigned, now uses RayLoadImage() + CreateTexture()
 [text] FormatText() - Corrected memory leak bug
 [models] Added Matrix struct and related functions
 [models] DrawBillboard() - Reviewed, now it works!
@@ -2090,7 +2090,7 @@ Release:     raylib 1.0.3 (19 December 2013)
 -----------------------------------------------
 Release:     raylib 1.0.2 (1 December 2013)
 -----------------------------------------------
-[text] GetDefaultFont() - Added, get default SpriteFont to be used on DrawTextEx()
+[text] GetDefaultFont() - Added, get default SpriteFont to be used on RayDrawTextEx()
 [shapes] CheckCollisionRecs() - Added, check collision between rectangles
 [shapes] CheckCollisionCircles() - Added, check collision between circles
 [shapes] CheckCollisionCircleRec() - Added, check collision circle-rectangle
@@ -2101,7 +2101,7 @@ Release:     raylib 1.0.2 (1 December 2013)
 -----------------------------------------------
 Update:     raylib 1.0.1 (28 November 2013)
 -----------------------------------------------
-[text] DrawText() - Removed spacing parameter
+[text] RayDrawText() - Removed spacing parameter
 [text] MeasureText() - Removed spacing parameter
 [text] DrawFps() - Renamed to DrawFPS() for coherence with similar function
 [core] IsKeyPressed() - Change functionality, check if key pressed once

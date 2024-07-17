@@ -520,28 +520,28 @@ return {
       }
     },
     {
-      name = "Rectangle",
-      description = "Rectangle, 4 components",
+      name = "RayRectangle",
+      description = "RayRectangle, 4 components",
       fields = {
         {
           type = "float",
           name = "x",
-          description = "Rectangle top-left corner position x"
+          description = "RayRectangle top-left corner position x"
         },
         {
           type = "float",
           name = "y",
-          description = "Rectangle top-left corner position y"
+          description = "RayRectangle top-left corner position y"
         },
         {
           type = "float",
           name = "width",
-          description = "Rectangle width"
+          description = "RayRectangle width"
         },
         {
           type = "float",
           name = "height",
-          description = "Rectangle height"
+          description = "RayRectangle height"
         }
       }
     },
@@ -633,7 +633,7 @@ return {
       description = "NPatchInfo, n-patch layout info",
       fields = {
         {
-          type = "Rectangle",
+          type = "RayRectangle",
           name = "source",
           description = "Texture source rectangle"
         },
@@ -720,7 +720,7 @@ return {
           description = "Texture atlas containing the glyphs"
         },
         {
-          type = "Rectangle *",
+          type = "RayRectangle *",
           name = "recs",
           description = "Rectangles in texture for the glyphs"
         },
@@ -3088,7 +3088,7 @@ return {
       }
     },
     {
-      name = "CloseWindow",
+      name = "RayCloseWindow",
       description = "Close window and unload OpenGL context",
       returnType = "void"
     },
@@ -3388,7 +3388,7 @@ return {
       returnType = "void"
     },
     {
-      name = "ShowCursor",
+      name = "RayShowCursor",
       description = "Shows cursor",
       returnType = "void"
     },
@@ -4566,7 +4566,7 @@ return {
       returnType = "void",
       params = {
         {type = "Texture2D", name = "texture"},
-        {type = "Rectangle", name = "source"}
+        {type = "RayRectangle", name = "source"}
       }
     },
     {
@@ -4577,7 +4577,7 @@ return {
     {
       name = "GetShapesTextureRectangle",
       description = "Get texture source rectangle that is used for shapes drawing",
-      returnType = "Rectangle"
+      returnType = "RayRectangle"
     },
     {
       name = "DrawPixel",
@@ -4811,7 +4811,7 @@ return {
       description = "Draw a color-filled rectangle",
       returnType = "void",
       params = {
-        {type = "Rectangle", name = "rec"},
+        {type = "RayRectangle", name = "rec"},
         {type = "Color", name = "color"}
       }
     },
@@ -4820,7 +4820,7 @@ return {
       description = "Draw a color-filled rectangle with pro parameters",
       returnType = "void",
       params = {
-        {type = "Rectangle", name = "rec"},
+        {type = "RayRectangle", name = "rec"},
         {type = "Vector2", name = "origin"},
         {type = "float", name = "rotation"},
         {type = "Color", name = "color"}
@@ -4857,7 +4857,7 @@ return {
       description = "Draw a gradient-filled rectangle with custom vertex colors",
       returnType = "void",
       params = {
-        {type = "Rectangle", name = "rec"},
+        {type = "RayRectangle", name = "rec"},
         {type = "Color", name = "col1"},
         {type = "Color", name = "col2"},
         {type = "Color", name = "col3"},
@@ -4881,7 +4881,7 @@ return {
       description = "Draw rectangle outline with extended parameters",
       returnType = "void",
       params = {
-        {type = "Rectangle", name = "rec"},
+        {type = "RayRectangle", name = "rec"},
         {type = "float", name = "lineThick"},
         {type = "Color", name = "color"}
       }
@@ -4891,7 +4891,7 @@ return {
       description = "Draw rectangle with rounded edges",
       returnType = "void",
       params = {
-        {type = "Rectangle", name = "rec"},
+        {type = "RayRectangle", name = "rec"},
         {type = "float", name = "roundness"},
         {type = "int", name = "segments"},
         {type = "Color", name = "color"}
@@ -4902,7 +4902,7 @@ return {
       description = "Draw rectangle lines with rounded edges",
       returnType = "void",
       params = {
-        {type = "Rectangle", name = "rec"},
+        {type = "RayRectangle", name = "rec"},
         {type = "float", name = "roundness"},
         {type = "int", name = "segments"},
         {type = "Color", name = "color"}
@@ -4913,7 +4913,7 @@ return {
       description = "Draw rectangle with rounded edges outline",
       returnType = "void",
       params = {
-        {type = "Rectangle", name = "rec"},
+        {type = "RayRectangle", name = "rec"},
         {type = "float", name = "roundness"},
         {type = "int", name = "segments"},
         {type = "float", name = "lineThick"},
@@ -5178,8 +5178,8 @@ return {
       description = "Check collision between two rectangles",
       returnType = "bool",
       params = {
-        {type = "Rectangle", name = "rec1"},
-        {type = "Rectangle", name = "rec2"}
+        {type = "RayRectangle", name = "rec1"},
+        {type = "RayRectangle", name = "rec2"}
       }
     },
     {
@@ -5200,7 +5200,7 @@ return {
       params = {
         {type = "Vector2", name = "center"},
         {type = "float", name = "radius"},
-        {type = "Rectangle", name = "rec"}
+        {type = "RayRectangle", name = "rec"}
       }
     },
     {
@@ -5209,7 +5209,7 @@ return {
       returnType = "bool",
       params = {
         {type = "Vector2", name = "point"},
-        {type = "Rectangle", name = "rec"}
+        {type = "RayRectangle", name = "rec"}
       }
     },
     {
@@ -5280,14 +5280,14 @@ return {
     {
       name = "GetCollisionRec",
       description = "Get collision rectangle for two rectangles collision",
-      returnType = "Rectangle",
+      returnType = "RayRectangle",
       params = {
-        {type = "Rectangle", name = "rec1"},
-        {type = "Rectangle", name = "rec2"}
+        {type = "RayRectangle", name = "rec1"},
+        {type = "RayRectangle", name = "rec2"}
       }
     },
     {
-      name = "LoadImage",
+      name = "RayLoadImage",
       description = "Load image from file into CPU memory (RAM)",
       returnType = "Image",
       params = {
@@ -5518,7 +5518,7 @@ return {
       returnType = "Image",
       params = {
         {type = "Image", name = "image"},
-        {type = "Rectangle", name = "rec"}
+        {type = "RayRectangle", name = "rec"}
       }
     },
     {
@@ -5576,7 +5576,7 @@ return {
       returnType = "void",
       params = {
         {type = "Image *", name = "image"},
-        {type = "Rectangle", name = "crop"}
+        {type = "RayRectangle", name = "crop"}
       }
     },
     {
@@ -5818,7 +5818,7 @@ return {
     {
       name = "GetImageAlphaBorder",
       description = "Get image alpha border rectangle",
-      returnType = "Rectangle",
+      returnType = "RayRectangle",
       params = {
         {type = "Image", name = "image"},
         {type = "float", name = "threshold"}
@@ -5976,7 +5976,7 @@ return {
       returnType = "void",
       params = {
         {type = "Image *", name = "dst"},
-        {type = "Rectangle", name = "rec"},
+        {type = "RayRectangle", name = "rec"},
         {type = "Color", name = "color"}
       }
     },
@@ -5986,7 +5986,7 @@ return {
       returnType = "void",
       params = {
         {type = "Image *", name = "dst"},
-        {type = "Rectangle", name = "rec"},
+        {type = "RayRectangle", name = "rec"},
         {type = "int", name = "thick"},
         {type = "Color", name = "color"}
       }
@@ -6058,8 +6058,8 @@ return {
       params = {
         {type = "Image *", name = "dst"},
         {type = "Image", name = "src"},
-        {type = "Rectangle", name = "srcRec"},
-        {type = "Rectangle", name = "dstRec"},
+        {type = "RayRectangle", name = "srcRec"},
+        {type = "RayRectangle", name = "dstRec"},
         {type = "Color", name = "tint"}
       }
     },
@@ -6171,7 +6171,7 @@ return {
       returnType = "void",
       params = {
         {type = "Texture2D", name = "texture"},
-        {type = "Rectangle", name = "rec"},
+        {type = "RayRectangle", name = "rec"},
         {type = "const void *", name = "pixels"}
       }
     },
@@ -6240,7 +6240,7 @@ return {
       returnType = "void",
       params = {
         {type = "Texture2D", name = "texture"},
-        {type = "Rectangle", name = "source"},
+        {type = "RayRectangle", name = "source"},
         {type = "Vector2", name = "position"},
         {type = "Color", name = "tint"}
       }
@@ -6251,8 +6251,8 @@ return {
       returnType = "void",
       params = {
         {type = "Texture2D", name = "texture"},
-        {type = "Rectangle", name = "source"},
-        {type = "Rectangle", name = "dest"},
+        {type = "RayRectangle", name = "source"},
+        {type = "RayRectangle", name = "dest"},
         {type = "Vector2", name = "origin"},
         {type = "float", name = "rotation"},
         {type = "Color", name = "tint"}
@@ -6265,7 +6265,7 @@ return {
       params = {
         {type = "Texture2D", name = "texture"},
         {type = "NPatchInfo", name = "nPatchInfo"},
-        {type = "Rectangle", name = "dest"},
+        {type = "RayRectangle", name = "dest"},
         {type = "Vector2", name = "origin"},
         {type = "float", name = "rotation"},
         {type = "Color", name = "tint"}
@@ -6488,7 +6488,7 @@ return {
       returnType = "Image",
       params = {
         {type = "const GlyphInfo *", name = "glyphs"},
-        {type = "Rectangle **", name = "glyphRecs"},
+        {type = "RayRectangle **", name = "glyphRecs"},
         {type = "int", name = "glyphCount"},
         {type = "int", name = "fontSize"},
         {type = "int", name = "padding"},
@@ -6531,7 +6531,7 @@ return {
       }
     },
     {
-      name = "DrawText",
+      name = "RayDrawText",
       description = "Draw text (using default font)",
       returnType = "void",
       params = {
@@ -6543,7 +6543,7 @@ return {
       }
     },
     {
-      name = "DrawTextEx",
+      name = "RayDrawTextEx",
       description = "Draw text using font and additional parameters",
       returnType = "void",
       params = {
@@ -6645,7 +6645,7 @@ return {
     {
       name = "GetGlyphAtlasRec",
       description = "Get glyph rectangle in font atlas for a codepoint (unicode character), fallback to '?' if not found",
-      returnType = "Rectangle",
+      returnType = "RayRectangle",
       params = {
         {type = "Font", name = "font"},
         {type = "int", name = "codepoint"}
@@ -7241,7 +7241,7 @@ return {
       params = {
         {type = "Camera", name = "camera"},
         {type = "Texture2D", name = "texture"},
-        {type = "Rectangle", name = "source"},
+        {type = "RayRectangle", name = "source"},
         {type = "Vector3", name = "position"},
         {type = "Vector2", name = "size"},
         {type = "Color", name = "tint"}
@@ -7254,7 +7254,7 @@ return {
       params = {
         {type = "Camera", name = "camera"},
         {type = "Texture2D", name = "texture"},
-        {type = "Rectangle", name = "source"},
+        {type = "RayRectangle", name = "source"},
         {type = "Vector3", name = "position"},
         {type = "Vector3", name = "up"},
         {type = "Vector2", name = "size"},
@@ -7773,7 +7773,7 @@ return {
       }
     },
     {
-      name = "PlaySound",
+      name = "RayPlaySound",
       description = "Play a sound",
       returnType = "void",
       params = {
