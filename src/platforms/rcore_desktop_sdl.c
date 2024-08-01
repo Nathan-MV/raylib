@@ -878,9 +878,9 @@ const char *GetClipboardText(void)
 }
 
 // Show mouse cursor
-void ShowCursor(void)
+void RayShowCursor(void)
 {
-    SDL_ShowCursor(SDL_ENABLE);
+    SDL_RayShowCursor(SDL_ENABLE);
 
     CORE.Input.Mouse.cursorHidden = false;
 }
@@ -888,7 +888,7 @@ void ShowCursor(void)
 // Hides mouse cursor
 void HideCursor(void)
 {
-    SDL_ShowCursor(SDL_DISABLE);
+    SDL_RayShowCursor(SDL_DISABLE);
 
     CORE.Input.Mouse.cursorHidden = true;
 }
@@ -897,7 +897,7 @@ void HideCursor(void)
 void EnableCursor(void)
 {
     SDL_SetRelativeMouseMode(SDL_FALSE);
-    SDL_ShowCursor(SDL_ENABLE);
+    SDL_RayShowCursor(SDL_ENABLE);
 
     platform.cursorRelative = false;
     CORE.Input.Mouse.cursorHidden = false;

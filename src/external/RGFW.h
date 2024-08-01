@@ -7963,7 +7963,7 @@ RGFW_UNUSED(win); /*!< if buffer rendering is not being used */
 		RGFW_UNUSED(win);
 
 		if (show) {
-			CGDisplayShowCursor(kCGDirectMainDisplay);
+			CGDisplayRayShowCursor(kCGDirectMainDisplay);
 		}
 		else {
 			CGDisplayHideCursor(kCGDirectMainDisplay);
@@ -7981,7 +7981,7 @@ RGFW_UNUSED(win); /*!< if buffer rendering is not being used */
 			return;
 
 		RGFW_UNUSED(win);
-		CGDisplayShowCursor(kCGDirectMainDisplay);
+		CGDisplayRayShowCursor(kCGDirectMainDisplay);
 		objc_msgSend_void(mouse, sel_registerName("set"));
 	}
 	

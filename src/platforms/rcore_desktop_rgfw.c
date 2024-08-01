@@ -50,8 +50,8 @@
     #define RGFW_OPENGL_ES2
 #endif
 
-void ShowCursor(void);
-void CloseWindow(void);
+void RayShowCursor(void);
+void RayCloseWindow(void);
 
 #if defined(__linux__)
     #define _INPUT_EVENT_CODES_H
@@ -65,9 +65,9 @@ void CloseWindow(void);
 
 #if defined(_WIN32) || defined(_WIN64)
     #define WIN32_LEAN_AND_MEAN
-	#define Rectangle rectangle_win32
-    #define CloseWindow CloseWindow_win32
-    #define ShowCursor __imp_ShowCursor
+	#define RayRectangle rectangle_win32
+    #define RayCloseWindow CloseWindow_win32
+    #define RayShowCursor __imp_ShowCursor
 	#define _APISETSTRING_
 	
 	#undef MAX_PATH
@@ -83,10 +83,10 @@ void CloseWindow(void);
 #include "../external/RGFW.h"
 
 #if defined(_WIN32) || defined(_WIN64)
-    #undef DrawText
-    #undef ShowCursor
-    #undef CloseWindow
-    #undef Rectangle
+    #undef RayDrawText
+    #undef RayShowCursor
+    #undef RayCloseWindow
+    #undef RayRectangle
 
 	#undef MAX_PATH
 	#define MAX_PATH 1025
@@ -665,7 +665,7 @@ const char *GetClipboardText(void)
 }
 
 // Show mouse cursor
-void ShowCursor(void)
+void RayShowCursor(void)
 {
     RGFW_window_showMouse(platform.window, true);
     CORE.Input.Mouse.cursorHidden = false;

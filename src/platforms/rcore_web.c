@@ -806,7 +806,7 @@ const char *GetClipboardText(void)
 }
 
 // Show mouse cursor
-void ShowCursor(void)
+void RayShowCursor(void)
 {
     if (CORE.Input.Mouse.cursorHidden)
     {
