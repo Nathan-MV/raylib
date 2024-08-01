@@ -293,7 +293,7 @@ const char *GetClipboardText(void)
 }
 
 // Show mouse cursor
-void ShowCursor(void)
+void RayShowCursor(void)
 {
     CORE.Input.Mouse.cursorHidden = false;
 }
